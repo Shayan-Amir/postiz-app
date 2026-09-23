@@ -31,11 +31,15 @@ export class AutopostDto {
 
   @IsBoolean()
   @IsDefined()
-  onSlot: boolean;
+  postOnSchedule: boolean;
 
   @IsBoolean()
   @IsDefined()
-  syncLast: boolean;
+  startFromLatest: boolean;
+
+  @IsBoolean()
+  @IsOptional()
+  notifyOnPublish?: boolean;
 
   @IsUrl()
   @IsDefined()

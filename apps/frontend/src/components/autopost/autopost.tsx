@@ -249,6 +249,10 @@ export const AddOrEditWebhook: FC<{
               }
             : {}),
           ...values,
+          onSlot: undefined,
+          postOnSchedule: values.onSlot,
+          syncLast: undefined,
+          startFromLatest: values.syncLast,
           ...(!syncLast
             ? {
                 lastUrl,

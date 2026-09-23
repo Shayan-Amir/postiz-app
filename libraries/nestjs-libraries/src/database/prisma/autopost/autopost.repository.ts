@@ -84,8 +84,8 @@ export class AutopostRepository {
         content: body.content,
         generateContent: body.generateContent,
         addPicture: body.addPicture,
-        syncLast: body.syncLast,
-        onSlot: body.onSlot,
+        syncLast: body.startFromLatest,
+        onSlot: body.postOnSchedule,
         lastUrl: body.lastUrl,
       },
       update: {
@@ -96,8 +96,8 @@ export class AutopostRepository {
         content: body.content,
         generateContent: body.generateContent,
         addPicture: body.addPicture,
-        syncLast: body.syncLast,
-        onSlot: body.onSlot,
+        syncLast: body.startFromLatest,
+        onSlot: body.postOnSchedule,
         lastUrl: body.lastUrl,
       },
     });
