@@ -60,7 +60,7 @@ export const Autopost: FC = () => {
     (data: any) => async (ac: 'on' | 'off') => {
       await fetch(`/autopost/${data.id}/active`, {
         body: JSON.stringify({
-          active: ac === 'on',
+          enabled: ac === 'on',
         }),
         method: 'POST',
       });

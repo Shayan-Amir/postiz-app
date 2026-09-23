@@ -57,9 +57,9 @@ export class AutopostController {
   async changeActive(
     @GetOrgFromRequest() org: Organization,
     @Param('id') id: string,
-    @Body('active') active: boolean
+    @Body('enabled') enabled: boolean
   ) {
-    return this._autopostsService.changeActive(org.id, id, active);
+    return this._autopostsService.changeActive(org.id, id, enabled);
   }
 
   @Post('/send')
