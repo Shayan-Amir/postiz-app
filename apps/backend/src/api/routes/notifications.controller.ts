@@ -19,15 +19,4 @@ export class NotificationsController {
       user.id
     );
   }
-
-  @Get('/list')
-  async notifications(
-    @GetUserFromRequest() user: User,
-    @GetOrgFromRequest() organization: Organization
-  ) {
-    return this._notificationsService.getNotifications(
-      organization.id,
-      user.id
-    );
-  }
 }
