@@ -47,15 +47,6 @@ export class AutopostController {
     return this._autopostsService.deleteAutopost(org.id, id);
   }
 
-  @Post('/:id/active')
-  async changeActive(
-    @GetOrgFromRequest() org: Organization,
-    @Param('id') id: string,
-    @Body('enabled') enabled: boolean
-  ) {
-    return this._autopostsService.changeActive(org.id, id, enabled);
-  }
-
   @Post('/send')
   async sendWebhook(@Query() query: OnlyURL) {
     return this._autopostsService.loadXML(query.url);
