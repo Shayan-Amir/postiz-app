@@ -2,7 +2,6 @@ import {
   Body,
   Controller,
   Delete,
-  Get,
   Param,
   Post,
   Put,
@@ -21,11 +20,6 @@ import { OnlyURL } from '@gitroom/nestjs-libraries/dtos/webhooks/webhooks.dto';
 @Controller('/autopost')
 export class AutopostController {
   constructor(private _autopostsService: AutopostService) {}
-
-  @Get('/')
-  async getAutoposts(@GetOrgFromRequest() org: Organization) {
-    return this._autopostsService.getAutoposts(org.id);
-  }
 
   @Post('/')
   @CheckPolicies([AuthorizationActions.Create, Sections.WEBHOOKS])
